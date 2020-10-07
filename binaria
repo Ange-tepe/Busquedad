@@ -1,0 +1,33 @@
+def bus_lineal(L, buscado):
+  indice=-1
+  for idx in range (len (L)):
+    if L[idx]==buscado:
+      indice = idx
+      break
+  return indice
+def busq_binaria(L, buscado):
+  izq=0
+  dere=len(L)-1
+  mid=int((izq+dere)//2)
+  if len(L)%2==0:
+    mid=(dere//2)+1
+  else :
+    mid =dere//2
+  while (L[mid] !=buscado):
+    if L[mid]>buscado:
+      dere=mid
+    else :
+      izq=mid
+    if (dere-izq) %2 ==0:
+      mid==(izq+((dere-izq//2))+1
+    else:
+        mid =izq+((dere-izq)//2)
+  return mid
+def mainBusL():
+  datos =[1,4,2,5,12,5,67]
+  dato=int ( input ("Que valor desea buscar"))
+  resultado=bus_lineal(datos, dato)
+  print("resultado",resultado)
+  datos.sort()
+
+mainBusL()
